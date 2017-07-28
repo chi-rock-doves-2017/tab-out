@@ -26,7 +26,9 @@ gem 'jbuilder', '~> 2.5'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
+gem 'bcrypt', '~> 3.1.7'
+gem 'twilio-ruby'
+gem "braintree", "~> 2.76.0"
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
@@ -34,6 +36,9 @@ gem 'jbuilder', '~> 2.5'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'dotenv-rails', require: 'dotenv/rails-now'
+  gem 'rspec-rails'
+  gem 'awesome_print'
 end
 
 group :development do
