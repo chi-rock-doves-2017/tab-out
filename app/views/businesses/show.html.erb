@@ -1,0 +1,13 @@
+<form action=''>
+  <input type='search' name='search'placeholder='search'>
+  <input type='submit' value='Search'>
+</form>
+<% if params[:search] %>
+  <p><%= link_to 'Show all tabs', @business %></p>
+<% end %>
+<% if params[:search] && @tabs.empty? %>
+  <p>No open tabs under <%= params[:search] %></p>
+<% else %>
+  <%= render @tabs %>
+<% end %>
+
