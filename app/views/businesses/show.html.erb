@@ -1,0 +1,14 @@
+<form action='' role="search" class="navbar-form navbar-left">
+  <div class="form-group">
+    <input type='search' class="form-control" name='search' placeholder='@username'>
+  </div>
+  <input type='submit' value='Search' class="btn btn-default">
+</form>
+<% if params[:search] %>
+  <p><%= link_to 'Show all tabs', @business %></p>
+<% end %>
+<% if params[:search] && @tabs.empty? %>
+  <p>No open tabs under <%= params[:search] %></p>
+<% else %>
+  <%= render @tabs %>
+<% end %>
