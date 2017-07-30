@@ -1,0 +1,14 @@
+<h2>Hi, <%= @customer.username %>!</h2>
+<% if @open_tabs %>
+  <h3>Your open tab:</h3>
+  <%= render @open_tabs %>
+<% else %>
+  <h3>You don't have any open tabs</h3>
+<% end %>
+
+<h3>Recent Tabs</h3>
+<%= render @recent_tabs %>
+
+<%= form_tag(new_tab_path, method:'get') do %>
+  <%= submit_tag("Open Tab") %>
+<% end %>

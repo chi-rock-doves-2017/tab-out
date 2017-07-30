@@ -6,9 +6,26 @@
 
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
+
   </head>
 
   <body>
+    <nav>
+      <ul>
+        <li><%= link_to 'Home', root_path %></li>
+        <% if logged_in? %>
+        <li><%= link_to 'Logout', logout_path %></li>
+        <% else %>
+        <li><%= link_to 'Login', login_path %></li>
+        <% end %>
+      </ul>
+      <% if logged_in? %>
+      <h1><%= name(current_user) %></h1>
+      <% else %>
+      <h1>TabOut</h1>
+      <% end %>
+    </nav>
+    <%= render 'layouts/errors' %>
     <%= yield %>
   </body>
 </html>
