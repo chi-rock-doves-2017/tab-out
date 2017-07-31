@@ -1,0 +1,10 @@
+
+<h2>Where are you?</h2>
+<%= form_tag('/tabs', method:'post') do %>
+<div class="input-group" id="bar-lookup">
+  <span class="input-group-addon" id="basic-addon2">@</span>
+  <%= text_field_tag(:username, nil, placeholder: '',  class: "form-control") %>
+</div>
+<%= submit_tag("Open Tab", id: 'open-tab', class: "btn btn-primary full-width") %>
+
+<% end %>

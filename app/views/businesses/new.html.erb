@@ -1,0 +1,29 @@
+<h2>Sign Up for TabOut! (as a business)</h2>
+
+<%= form_for @business do |f| %>
+  <%= render 'layouts/errors' %>
+
+  <%= f.label :username %><br>
+  <%= f.text_field :username, class: "full-width form-control" %><br>
+
+  <%= f.label :password %><br>
+  <%= f.password_field :password, class: "full-width form-control" %><br>
+
+  <%= f.label :password_confirmation, "Confirm Password" %><br>
+  <%= f.password_field :password_confirmation, class: "full-width form-control" %><br>
+
+  <%= f.label :first_name %><br>
+  <%= f.text_field :first_name, class: "full-width form-control" %><br>
+
+  <%= f.label :last_name %><br>
+  <%= f.text_field :last_name, class: "full-width form-control" %><br>
+
+  <%= f.label :phone %><br>
+  <%= f.text_field :phone, class: "full-width form-control" %><br>
+
+  <%= f.label :email %><br>
+  <%= f.text_field :email, class: "full-width form-control" %><br>
+  <br>
+  <%= f.submit 'Sign Up' "form_submit_button btn btn-success full-width"%>
+<% end %>
+<p>Already have an account? <%= link_to "Log in.", login_path %> </p>
