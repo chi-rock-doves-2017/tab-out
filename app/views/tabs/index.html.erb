@@ -1,0 +1,7 @@
+<%= link_to '<i class="fa fa-angle-double-left" aria-hidden="true"></i>'.html_safe, :back, class: 'navigation' %>
+
+<h3>History of <%= name(current_user) %></h3>
+<hr>
+<ul class="list-group">
+  <%= render @tabs %>
+</ul>
